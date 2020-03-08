@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Riyad Flowers</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- icon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icon/.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/icon/.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icon/.png">
+    <link rel="manifest" href="img/icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/icon/ms-icon-144x144.png">
+    
+    <style>
+
+    .image_selected {
+        position: absolute;
+        width: 192px;
+        top: 22px;
+        left: 30px;
+        visibility: hidden;
+        }
+
+    .image_selected_active {
+        visibility:visible;
+        }
+        
+    .more{
+            display: none;
+        }
+        
+        .forShowMore{
+            display: block;
+        }
+        
+        .hideLoadMore{
+            display: none;
+        }
+        
+    </style>
+    
+</head>
+
+<body>
+    
+    
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #ffabe5;">
+    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span > <i class="navbar-toggler-icon" aria-hidden="true"></i>
+          </span>
+        </button>
+          
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav  mr-auto">
+            <li class="nav-item">
+              <a class="nav-link lol" href="#home">BIRTHDAY<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+   <a class="nav-link " href="#product"  >OCCASIONS</a>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#price">FLOWERS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#business">PLANTS</a> 
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="#contact">CONTACT</a>
+              </li>
+              
+          </ul>
+            <!-- Button trigger modal -->
+            <span class="mr-3" data-toggle="modal" data-target="#exampleModal">
+                <!--End Button trigger modal -->
+                                    <i class="shopping-cart fa fa-shopping-cart" style="font-size: 35px"> 
+                    <span id="clicks" class="badge badge-light">0</span>
+                </i>
+            </span>   
+        <button class="btn btn-danger my-2 my-sm-0" type="button" onclick="emptyCart()">Clear</button>
+        
+        </div>
+      </nav>   
+
+    
+
+   
+    <div class="container in-contain">
+        <div class="pt-5 pb-5">
+            
+            <!-- End Header -->
+            
+            <!-- Start Body Content -->
+            
+           
+            
+            <div class="card bg-dark text-black">
+                <img src="img/qq.jpg" class="card-img" alt="..." height="400px">
+  <div class="card-img-overlay">
+      <h1 class="card-title text-left" style="color: #896565">Riyad Flowers</h1>
+      <h2 class="card-text" style="color: #896565;">This is a wider card with supporting text below <br> as a natural lead-in to additional content. <br> This content is a little bit longer.</h2>
+    <p class="card-text" style="color: #896565;">Last updated 3 mins ago</p>
+  </div>
+</div>
+            
+            
+
+
+<div class="container text-center">
+    <div class="spinner-grow text-primary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-secondary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-success" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-danger" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-warning" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-info" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-light" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-dark" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+</div>
+
+
+
+
+<div class="container">
+    
+                <div class="last-news card-columns mr-3 ml-3 mt-5 card-deck">
+                    <div class="item card-body card shadow mb-4 border border-primary">
+                        <img src="img/flored.jpg" class="card-img-top" alt="item">
+                        <img id="noSelect1" class=" image_selected" src="img/selected.png" alt="">
+                            <h4 class="card-title text-primary text-center"><b id="nameFlower1">You're In My Heart</b></h4>
+                            <p class="card-text text-justify">Let your love bloom with this beautiful You're In My Heart flower bouquet. This all red flower arrangement is hand-arranged by a local florist near Let your love bloom with this beautiful You're In My Heart ...</p>
+                            <h5 class="text-left" style="color: red">price:<kbd id="priceFlower1">150</kbd>$</h5>
+                            <button id="myBtn1" type="button" class="add-to-cart btn btn-primary mb-4 btn-block" onclick="select1()">Add  To  Cart</button>
+                    </div>
+                    
+                    
+                    
+                    <div class="item card-body card shadow mb-4 border border-primary">
+                        <img src="img/flococ.jpg" class="card-img-top" alt="...">
+                        <img id="noSelect2" class=" image_selected" src="img/selected.png" alt="">
+                            <h4 class="card-title text-primary text-center"><b id="nameFlower2">Dreaming of Tuscany</b></h4>
+                            <p class="card-text text-justify">This uniquely colored arrangement boasts European flare. It's sure to make your recipient's day and have them daydreaming of a beautiful field of This uniquely colored arrangement boasts European flare This uniquely colored arrangement..</p>
+                            <h5 class="text-left" style="color: red">price:<kbd id="priceFlower2">200</kbd>$</h5>
+                            <button id="myBtn2" type="button" class="add-to-cart btn btn-primary mb-4 btn-block" onclick="select2()">Add  To  Cart</button>
+                    </div>
+                    <div class="item card-body card shadow mb-4 border border-primary">
+                        <img src="img/floyel.jpg" class="card-img-top" alt="...">
+                        <img id="noSelect3" class=" image_selected" src="img/selected.png" alt="">
+                            <h4 class="card-title text-primary text-center"><b id="nameFlower3">Sun Flowers</b></h4>
+                            <p class="card-text text-justify">Pour on the fun by sending this dazzling bouquet of summer's brightest blooms! Great if you're invited to a pool party, BBQ or just want to brighten ..</p>
+                            <h5 class="text-left" style="color: red">price:<kbd id="priceFlower3">100</kbd>$</h5>
+                            <button id="myBtn3" type="button" class="add-to-cart btn btn-primary mb-4 btn-block" onclick="select3()">Add  To  Cart</button>
+                    </div>
+                </div>
+
+    
+    <div class="more" id="showMore">
+        
+        <div class="last-news card-columns mr-3 ml-3 mt-5 card-deck">
+                    <div class="item card-body card shadow mb-4 border border-primary">
+                        <img src="img/conco.jpg" class="card-img-top" alt="...">
+                        <img id="noSelect4" class=" image_selected" src="img/selected.png" alt="">
+                            <h4 class="card-title text-primary text-center"><b id="nameFlower4">Concord Florist</b></h4>
+                            <p class="card-text text-justify">Let your love bloom with this beautiful You're In My Heart flower bouquet. This all red flower arrangement is hand-arranged by a local florist near ...</p>
+                            <h5 class="text-left" style="color: red">price:<kbd id="priceFlower4">50</kbd>$</h5>
+                            <button id="myBtn4" type="button" class="add-to-cart btn btn-primary mb-4 btn-block" onclick="select4()">Add  To  Cart</button>
+                    </div>
+                    
+                    <div class="item card-body card shadow mb-4 border border-primary">
+                        <img src="img/floaq.jpg" class="card-img-top" alt="...">
+                        <img id="noSelect5" class=" image_selected" src="img/selected.png" alt="">
+                            <h4 class="card-title text-primary text-center"><b id="nameFlower5">Plainfield Florist</b></h4>
+                            <p class="card-text text-justify">This uniquely colored arrangement boasts European flare. It's sure to make your recipient's day and have them daydreaming of a beautiful field of ..</p>
+                            <h5 class="text-left" style="color: red">price:<kbd id="priceFlower5">150</kbd>$</h5>
+                            <button id="myBtn5" type="button" class="add-to-cart btn btn-primary mb-4 btn-block" onclick="select5()">Add  To  Cart</button>
+                    </div>
+                    <div class="item card-body card shadow mb-4 border border-primary">
+                        <img src="img/floh.jpg" class="card-img-top" alt="...">
+                        <img id="noSelect6" class=" image_selected" src="img/selected.png" alt="">
+                            <h4 class="card-title text-primary text-center"><b id="nameFlower6">Sun Flowers</b></h4>
+                            <p class="card-text text-justify">Pour on the fun by sending this dazzling bouquet of summer's brightest blooms! Great if you're invited to a pool party, BBQ or just want to brighten ..</p>
+                            <h5 class="text-left" style="color: red">price:<kbd id="priceFlower6">100</kbd>$</h5>
+                            <button id="myBtn6" type="button" class="add-to-cart btn btn-primary mb-4 btn-block" onclick="select6()">Add  To  Cart</button>
+                    </div>
+                </div>
+    </div>
+    
+    <button type="button" class="btn btn-primary btn-block" id="loadMore">LOAD MORE</button>
+    
+            </div>
+            
+            <!-- End Body Content -->
+            
+            <!-- Start Footer -->
+    </div>
+    </div>
+
+    <footer class="pt-4 bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-6">
+                    <div class="footer-content">
+                        <h5 class="mb-3">Project By: Riyad AlShatbi</h5>
+                        <ul class="list-unstyled">
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-6">
+                    <div class="footer-content">
+
+                        <i class="fa fa-heart" aria-hidden="true" style="color:red; "></i>
+                        
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-6">
+                    <div class="footer-content">
+                        
+                        
+                        
+       
+   
+                        
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-6">
+                    <div class="footer-content">
+                        
+                        <form>
+   
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
+            <span class="input-group-btn">
+              <button class="btn btn-outline-warning" type="button">Go!</button>
+            </span>
+          </div>
+ 
+       
+      </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+    </footer>
+
+
+    
+    
+        <!-- Start Modal For Boutton Shopping -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+
+                    <table class="table table-striped table-dark">
+                        <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Number</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                        </thead>
+                        <tbody id="addToCart">
+                        
+                        </tbody>
+                    </table>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal For Boutton Shopping -->
+
+
+
+
+    
+
+
+    
+
+
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    
+<!-- Start Library For Fly Product To Cart -->
+    <script src='js/jquery-ui.min.js'></script>
+<!-- Start Library For Fly Product To Cart -->
+    
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

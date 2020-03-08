@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "Mohammad Bold normal";
+    src: url("../fonts/Mohammad Bold normal.ttf");
+}
+
+body {
+    background-color: #ffabe5;
+    font-family: "Mohammad Bold normal", 'Ruda', sans-serif;
+    direction: ltr;
+    text-align: left;
+}
+    
+
+/********************************* Start Main Style *************************************/
+
+/*start navbar*/
+
+
+
+/* end navbar*/
+
+
+/* End Main Style */
+
+
+
+.in-contain {
+    background-color: #ffabe5;
+}
+
+
+
